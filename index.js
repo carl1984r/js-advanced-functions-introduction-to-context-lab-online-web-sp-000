@@ -22,7 +22,7 @@ function createTimeInEvent(employee, dateStamp){
     return employee
 }
 
-function createTimeOutEvent(employee, dateStamp){    
+function createTimeOutEvent(employee, dateStamp){
     employee.timeOutEvents.push(createEvent("TimeOut", dateStamp))
     return employee
 }
