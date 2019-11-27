@@ -40,4 +40,12 @@ function createEvent(type, dateStamp){
     return event
 }
 
-function hoursWorkedOnDate() {};
+function hoursWorkedOnDate(employee, date){
+
+    const eventOnDate = function(event) { return event.date === date }
+    
+    const inTime = employee.timeInEvents.find(eventOnDate).hour;
+    const outTime = employee.timeOutEvents.find(eventOnDate).hour;
+
+    return (outTime - inTime) / 100
+}
