@@ -49,3 +49,5 @@ function hoursWorkedOnDate(employee, date){
 
     return (clockout - clockin) / 100
 }
+
+function wagesEarnedOnDate() {};
