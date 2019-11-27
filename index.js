@@ -71,5 +71,3 @@ function calculatePayroll(employees){
 
     return employees.reduce(toBeReduced, 0)
 }
-
-
