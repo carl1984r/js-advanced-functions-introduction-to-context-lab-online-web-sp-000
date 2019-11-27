@@ -54,4 +54,11 @@ function wagesEarnedOnDate(employee, date){
     return hoursWorkedOnDate(employee, date) * employee.payPerHour
 }
 
-function allWagesFor() {};
+function allWagesFor(employee){
+    
+    const reducer = (totalWages, timeOutEvent) => {
+        return totalWages + wagesEarnedOnDate(employee, timeOutEvent.date)
+    }
+    
+    return employee.timeOutEvents.reduce(reducer, 0);
+}
