@@ -22,6 +22,11 @@ function createTimeInEvent(employee, dateStamp){
     return employee
 }
 
+function createTimeOutEvent(employee, dateStamp){    
+    employee.timeOutEvents.push(createEvent("TimeOut", dateStamp))
+    return employee
+}
+
 function createEvent(type, dateStamp){
 
     const [year, month, day, hour] = dateStamp.split(/[\s-]/g)
