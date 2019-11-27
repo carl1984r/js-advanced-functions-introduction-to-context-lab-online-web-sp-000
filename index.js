@@ -32,5 +32,5 @@ function createEvent(type, dateStamp){
         date: `${year}-${month}-${day}`
     }
 
-    return event
+    return even
 }
