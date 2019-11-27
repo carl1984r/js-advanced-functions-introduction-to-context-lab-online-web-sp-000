@@ -71,3 +71,9 @@ function calculatePayroll(employees){
 
     return employees.reduce(toBeReduced, 0)
 }
+
+function findEmployeeByFirstName(employees, firstName){
+    return employees.find( (employee) => {
+        return employee.firstName === firstName
+    });
+}
