@@ -56,9 +56,20 @@ function wagesEarnedOnDate(employee, date){
 
 function allWagesFor(employee){
 
-    const reducer = (totalWages, timeOutEvent) => {
+    const toBeReduced = (totalWages, timeOutEvent) => {
         return totalWages + wagesEarnedOnDate(employee, timeOutEvent.date)
     }
 
-    return employee.timeOutEvents.reduce(reducer, 0);
+    return employee.timeOutEvents.reduce(toBeReduced, 0);
 }
+
+function calculatePayroll(employees){
+
+    const toBeReduced = (totalWages, employee) => {
+        return totalWages + allWagesFor(employee)
+    }
+
+    return employees.reduce(toBeReduced, 0)
+}
+
+
