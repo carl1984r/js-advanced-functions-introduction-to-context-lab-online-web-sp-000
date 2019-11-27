@@ -55,10 +55,10 @@ function wagesEarnedOnDate(employee, date){
 }
 
 function allWagesFor(employee){
-    
+
     const reducer = (totalWages, timeOutEvent) => {
         return totalWages + wagesEarnedOnDate(employee, timeOutEvent.date)
     }
-    
+
     return employee.timeOutEvents.reduce(reducer, 0);
 }
