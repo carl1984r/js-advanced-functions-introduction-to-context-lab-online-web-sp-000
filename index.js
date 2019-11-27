@@ -50,4 +50,6 @@ function hoursWorkedOnDate(employee, date){
     return (clockout - clockin) / 100
 }
 
-function wagesEarnedOnDate() {};
+function wagesEarnedOnDate(employee, date){
+    return hoursWorkedOnDate(employee, date) * employee.payPerHour
+}
