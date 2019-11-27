@@ -39,3 +39,5 @@ function createEvent(type, dateStamp){
 
     return event
 }
+
+function hoursWorkedOnDate() {};
